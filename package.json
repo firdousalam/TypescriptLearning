@@ -1,11 +1,10 @@
 {
   "name": "typescriptlearning",
   "version": "1.0.0",
-  "description": "my typescript code",
-  "main": "app.js",
+  "description": "this will be a typescript projects",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "lite-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/firdousalam/TypescriptLearning/issues"
   },
-  "homepage": "https://github.com/firdousalam/TypescriptLearning#readme",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
-  }
+  "homepage": "https://github.com/firdousalam/TypescriptLearning#readme"
 }
