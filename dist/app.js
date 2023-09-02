@@ -1,6 +1,6 @@
 "use strict";
 //let x  = 10;
-let x = ["a", "b", "c", 1];
+let x = ["a", "b", "c"];
 //let x  = 10;
 let y = ["a", "b", "c", 1, true];
 //
@@ -34,4 +34,10 @@ function loginUser(loginRequest) {
         "Name": "firdous alam"
     };
     return response;
+}
+let x2 = "hi";
+x2.toUpperCase();
+//x2 = 10.0;
+if (typeof x == 'string') {
+    console.log(parseFloat(x2) / 0);
 }

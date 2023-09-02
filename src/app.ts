@@ -1,12 +1,25 @@
 //let x  = 10;
-let x :Array<string> = ["a","b","c"];
+let x :Array<string> = ["a","b","c"]; // 2
 //let x  = 10;
-let y :Array<any> = ["a","b","c",1,true];
+let y :Array<any> = ["a","b","c",1,true]; //touple
 //
- interface LoginRequest {
+/*
+type Person = {
+    name: string;
+    age: number;
+  }
+  type Person = {
+    phone: string;
+  }
+  */
+interface LoginRequest {
     emailId : string,
     password : string,
     loginType ?: string
+ }
+ interface LoginRequest {
+   
+    mobile ?: string
  }
 interface LoginResponse {
     emailId ?: string,
@@ -18,9 +31,12 @@ interface LoginResponse {
 let z:any ;
 z =10;
 z ="stringbb";
-
+let m = null; // null
+let n;
+console.log(n); //undefined
+console.log(x[4]); //undifined
 // Parameter type annotation
-function greet(name:string|number):string {
+function greet(name:string|number|undefined|null):string {
     if(typeof name == 'string'){
         console.log("Hello, " + name.toUpperCase() + "!!");
     }
@@ -52,3 +68,44 @@ function loginUser(loginRequest: LoginRequest):LoginResponse {
    }
     return response;
 }
+
+let x2:string | number = "HI";//
+x2.toUpperCase(); 
+//x2 = 10.0;
+//if(typeof x == 'string'){
+    console.log(parseFloat(x2)/0);  //NaN
+//}
+let unionVar : string|number | LoginResponse;
+// angular
+class Car { 
+    //field 
+    engine:string; 
+  
+    //constructor 
+    constructor(engine:string) { 
+       this.engine = engine 
+    }  
+    ngInit(){
+     //   fetchAPI calling machanism where data get called on page load
+    }
+    //function 
+    disp():void { 
+       console.log("Engine is  :   "+this.engine) 
+    } 
+ }
+
+ //angular nestjs nextjs  react
+
+
+ module TutorialPoint { 
+    export function add(x, y) {  
+       console.log(x+y); 
+    } 
+ }
+ /*
+ // child procress i.e its apart of one big application
+ Namespace Syntax (New)
+ namespace TutorialPoint { 
+    export function add(x, y) { console.log(x + y);} 
+ }
+ */
